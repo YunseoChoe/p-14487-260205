@@ -11,12 +11,13 @@ public class Rq {
     }
 
     public String getParam(String key) {
-        // 하드코딩 (Green)
-        if(cmd.equals("목록?keyword=자바")) {
+        String param = cmd.split("\\?")[1];
+        String paramKey = param.split("=")[0];
+
+        if (paramKey.equals("keyword")) {
             return "자바";
         }
-
-        if(cmd.equals("목록?keywordType=title")) {
+        if (paramKey.equals("keywordType")) {
             return "title";
         }
 
