@@ -9,4 +9,8 @@ public class Rq {
     public String getActionName() {
         return cmd.split("\\?")[0]; // 리팩토링
     }
+
+    public String getParam(String key) {
+        return "자바";
+    }
 }
